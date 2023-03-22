@@ -89,7 +89,7 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
             Future of Shopping with our AI NFT Marketplace
             </Text>
             <Text style="body2" css={{ mb: 48 }}>
-            Discover the most outstanding NTFs in all topics of life. Creative your NTFs and sell them
+            Discover the most outstanding NTFs in all topics of life. Create your NTFs and sell them
             </Text>
             <a
               href="https://mbdfinancials.com/"

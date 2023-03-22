@@ -38,19 +38,19 @@ class MyDocument extends Document {
           href="/mbddark.png"
         />
 
-        {/* Reservoir meta tags */}
-        <meta property="reservoir:title" content="MBD Boulevard" />
-        <meta property="reservoir:icon" content="/mbdlight.png" />
+        {/* Reservoir meta tags reservoir:*/}
+        <meta property="title" content="MBD Boulevard" />
+        <meta property="icon" content="/mbdlight.png" />
         <meta
-          property="reservoir:token-url-mainnet"
+          property="token-url-mainnet"
           content="/collection/ethereum/${contract}/${tokenId}"
         />
         <meta
-          property="reservoir:token-url-goerli"
+          property="token-url-goerli"
           content="/collection/goerli/${contract}/${tokenId}"
         />
         <meta
-          property="reservoir:token-url-polygon"
+          property="token-url-polygon"
           content="/collection/polygon/${contract}/${tokenId}"
         />
         <body>
