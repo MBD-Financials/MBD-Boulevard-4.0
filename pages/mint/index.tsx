@@ -154,8 +154,8 @@ const [filterCollection, setFilterCollection] = useState<string | undefined>(
                 <div style={{
                   "width":'100%',
                   "border": "4px dotted",
-                  'border-radius': '1rem',
-                  'text-align':'center'
+                  "borderRadius":'1rem',
+                  'textAlign':'center',
                   }}>
 
                 
@@ -235,7 +235,7 @@ const [filterCollection, setFilterCollection] = useState<string | undefined>(
                         onClick = {async () =>{
                           mintNFT(
                             name,
-                            image,
+                            image!,
                             description
                           )
                         }}

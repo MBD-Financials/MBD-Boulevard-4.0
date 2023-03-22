@@ -149,7 +149,7 @@ function MyApp({
           }}
           theme={reservoirKitTheme}
         >
-          <CartProvider referrer='' referrerFeeBps={10}>
+          <CartProvider referrer='0x9faC919Cf3C3B3BDF6cb80e0C0C73c891BBAE713' referrerFeeBps={20}>
             <Tooltip.Provider>
               <ConnectKitProvider
                 mode={theme == 'dark' ? 'dark' : 'light'}

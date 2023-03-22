@@ -71,11 +71,12 @@ const BuyNow: FC<Props> = ({ token, mutate, buttonCss, buttonProps = {} }) => {
       trigger={trigger}
       tokenId={token?.token?.tokenId}
       collectionId={token?.token?.collection?.id}
+      referrer = '0x9faC919Cf3C3B3BDF6cb80e0C0C73c891BBAE713'
+      referrerFeeBps={20}
       onClose={(data, stepData, currentStep) => {
         if (mutate && currentStep == BuyStep.Complete) mutate()
       }}
-      referrer = ''
-      referrerFeeBps={10}
+      
     />
   )
 }
