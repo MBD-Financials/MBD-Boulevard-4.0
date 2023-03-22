@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import Image from "next/image";
-
+import { Text, Flex, Box } from '../../components/primitives'
 //INTRNAL IMPORT
 import Style from "./DropZone.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -84,36 +84,62 @@ const DropZone = ({
       {fileUrl && (
         <aside className={Style.DropZone_box_aside}>
           <div className={Style.DropZone_box_aside_box}>
+          <Flex direction="column" justify="start" css={{ gap: '$4' }}>
             <Image src={fileUrl} alt="nft image" width={200} height={200} />
+          </Flex>
+
 
             <div className={Style.DropZone_box_aside_box_preview}>
               <div className={Style.DropZone_box_aside_box_preview_one}>
-                <p>
-                  <samp>NFT Name: </samp>
-                  {name || ""}
-                </p>
-                <p>
-                  <samp>Website: </samp>
-                  {website || ""}
-                </p>
-                <p>
-                  <samp>Properties: </samp>
-                  {properties || ""}
-                </p>
-                {/* <p>
-                  <samp>Category: </samp>
-                  {category || ""}
-                </p> */}
-                <p>
-                  <samp>Description: </samp>
-                  {description || ""}
-                </p>
-              </div>
-              <div className={Style.DropZone_box_aside_box_preview_one}>
+              <Flex direction="column" justify="between" css={{ gap: '$4' }}>
+                  <Flex direction="row" justify="between" css={{ gap: '$4' }}>
+                    <Text
+                        style="h4"
+
+                        css={{ color: '$white', textAlign: 'center' }}
+                      >
+                        NFT Name: 
+                        {name || ""}
+                    </Text>
+                  </Flex>
                 
+                  <Flex direction="row" justify="between" css={{ gap: '$4' }}>
+                    <Text
+                      style="h4"
+                      css={{ color: '$white', textAlign: 'center' }}
+                    >
+                      Website:
+                      {website || ""}
+                    </Text>
+                  </Flex>
+                <Flex direction="row" justify="between" css={{ gap: '$4' }}>
+                <Text
+                  style="h4"
+                  css={{ color: '$white', textAlign: 'center' }}
+                >
+                  Properties:
+                  {properties || ""}
+                </Text>
+                </Flex>
+                <Flex direction="row" justify="between" css={{ gap: '$4' }}>
+                <Text
+                  style="h4"
+                  css={{ color: '$white', textAlign: 'center' }}
+                >
+
+                  Description: 
+                  {description || ""}
+                </Text>
+                </Flex>
+                </Flex>
+                
+                
+
+
               </div>
             </div>
           </div>
+
         </aside>
       )}
     </div>

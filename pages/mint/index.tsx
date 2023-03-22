@@ -35,7 +35,7 @@ const IndexPage: NextPage = () => {
 const fetchContract = async () => {
 
   const sdk = ThirdwebSDK.fromPrivateKey(
-    process.env.NEXT_PUBLIC_PRIVATE_KEY,
+    process.env.NEXT_PUBLIC_PRIVATE_KEY!,
     "polygon"
   );
 
@@ -45,7 +45,7 @@ const fetchContract = async () => {
     "nft-collection"
   );
   
-  const thirdwebSDK = ThirdwebSDK.fromSigner(signer);
+  const thirdwebSDK = ThirdwebSDK.fromSigner(signer!);
   const userContract = await thirdwebSDK.getContract(
     "0x42EB6537AFD6a6DD5d5feB9705eb33A59Db143B4",
     "nft-collection"
@@ -60,11 +60,11 @@ const mintNFT = async (name:string, image:string, description:string) => {
   return;
 
   try {
-    const contracts = await fetchContract(signer);
+    const contracts = await fetchContract();
     const mintSigner = contracts[0];
     const contract = contracts[1];
     const data = {
-      to: address,
+      to: address!,
       metadata: {
         name,
         description,

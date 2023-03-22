@@ -74,7 +74,8 @@ const BuyNow: FC<Props> = ({ token, mutate, buttonCss, buttonProps = {} }) => {
       onClose={(data, stepData, currentStep) => {
         if (mutate && currentStep == BuyStep.Complete) mutate()
       }}
-      referrerFeeBps = {1}
+      referrer = ''
+      referrerFeeBps={10}
     />
   )
 }
