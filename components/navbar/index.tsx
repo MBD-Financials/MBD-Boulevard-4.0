@@ -143,9 +143,9 @@ const Navbar = () => {
             <Link href="/portfolio">
               <NavItem active={router.pathname == '/portfolio'}>Sell</NavItem>
             </Link>
-            {/* <Link href="https://docs.reservoir.tools/docs">
-              <NavItem active={false}>Docs</NavItem>
-            </Link> */}
+            <Link href="/mint">
+              <NavItem active={false}>Mint</NavItem>
+            </Link>
           </Flex>
         </Flex>
       </Box>
