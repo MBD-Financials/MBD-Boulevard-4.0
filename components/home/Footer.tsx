@@ -33,30 +33,27 @@ const SectionLink: FC<SectionLinkProps> = ({ name, href }) => (
 const developerSectionLinks = [
   {
     name: 'Docs',
-    href: 'https://docs.reservoir.tools/docs',
+    href: 'https://docs.mbdfinancials.com/',
   },
-  {
-    name: 'API Reference',
-    href: 'https://docs.reservoir.tools/reference/overview',
-  },
+  // {
+  //   name: 'API Reference',
+  //   href: 'https://docs.reservoir.tools/reference/overview',
+  // },
   {
     name: 'Github',
-    href: 'https://github.com/reservoirprotocol',
+    href: 'https://github.com/MBD-Financials',
   },
 ]
 
 const companySectionLinks = [
-  {
-    name: 'Jobs',
-    href: 'https://jobs.ashbyhq.com/reservoir',
-  },
+  
   {
     name: 'Terms of Use',
-    href: 'https://reservoir.tools/terms',
+    href: 'https://mbdfinancials.com/terms-conditions/',
   },
   {
     name: 'Privacy Policy',
-    href: 'https://reservoir.tools/privacy',
+    href: 'https://mbdfinancials.com/privacy-policy-3/',
   },
 ]
 

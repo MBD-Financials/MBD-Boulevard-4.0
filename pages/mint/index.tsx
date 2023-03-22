@@ -82,7 +82,8 @@ const mintNFT = async (name:string, image:string, description:string) => {
 
     router.push("/portfolio");
   } catch (error) {
-    alert(error)
+    console.log(error);
+    // alert(error)
   }
 };
 
