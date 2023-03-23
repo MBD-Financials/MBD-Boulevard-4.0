@@ -87,6 +87,7 @@ const Navbar = () => {
       </Flex>
     </Flex>
   ) : (
+    <Flex>
     <Flex
       css={{
         height: NAVBAR_HEIGHT,
@@ -126,6 +127,7 @@ const Navbar = () => {
               )}
             </Box>
           </Link>
+
           <Box css={{ flex: 1, px: '$5', maxWidth: 460 }}>
             <GlobalSearch
               ref={searchRef}
@@ -134,6 +136,7 @@ const Navbar = () => {
               key={router.asPath}
             />
           </Box>
+
           <Flex align="center" css={{ gap: '$5', mr: '$5' }}>
             <Link href="/collection-rankings">
               <NavItem active={router.pathname == '/collection-rankings'}>
@@ -146,7 +149,11 @@ const Navbar = () => {
             <Link href="/mint">
               <NavItem active={false}>Mint</NavItem>
             </Link>
+            <Link href="/mint">
+              <NavItem active={false}>Rewards</NavItem>
+            </Link>
           </Flex>
+
         </Flex>
       </Box>
 
@@ -161,6 +168,76 @@ const Navbar = () => {
           </Box>
         )}
       </Flex>
+      
+    </Flex>
+
+    <Flex
+      css={{
+        // height: NAVBAR_HEIGHT,
+        px: '$5',
+        width: '100%',
+        maxWidth: 1920,
+        mx: 'auto',
+        borderBottom: '1px solid $gray4',
+        zIndex: 999,
+        background: '$neutralBg',
+        // position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+      }}
+      
+      align="center"
+      justify="between"
+    >
+
+      <Link href="/collection-rankings">
+        <NavItem active={router.pathname == '/'}>
+        Home
+        </NavItem>
+      </Link>
+      
+      <Link href="/portfolio">
+        <NavItem active={router.pathname == '/portfolio'}>PFP</NavItem>
+      </Link>
+      
+      <Link href="/portfolio">
+        <NavItem active={false}>Arts</NavItem>
+      </Link>
+
+      <Link href="/portfolio">
+        <NavItem active={false}>Audio</NavItem>
+      </Link>
+
+      <Link href="/portfolio">
+        <NavItem active={false}>Video</NavItem>
+      </Link>
+
+      <Link href="/portfolio">
+        <NavItem active={false}>Collectibles</NavItem>
+      </Link>
+
+      <Link href="/portfolio">
+        <NavItem active={false}>1/1</NavItem>
+      </Link>
+
+      <Link href="/portfolio">
+        <NavItem active={false}>Limited Edition</NavItem>
+      </Link>
+
+      <Link href="/portfolio">
+        <NavItem active={false}>Coupons</NavItem>
+      </Link>
+
+      <Link href="/portfolio">
+        <NavItem active={false}>Other</NavItem>
+      </Link>
+      <Link href="/portfolio">
+        <NavItem active={false}>More</NavItem>
+      </Link>
+    
+    </Flex>
+
     </Flex>
   )
 }
