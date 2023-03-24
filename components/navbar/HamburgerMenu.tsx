@@ -161,7 +161,33 @@ const HamburgerMenu = () => {
                   pt: '24px',
                 }}
               >
-                Portfolio
+                Sell
+              </Text>
+            </Link>
+            <Link href="/mint" legacyBehavior>
+              <Text
+                style="subtitle1"
+                css={{
+                  borderBottom: '1px solid $gray4',
+                  cursor: 'pointer',
+                  pb: '$4',
+                  pt: '24px',
+                }}
+              >
+                Mint
+              </Text>
+            </Link>
+            <Link href="/" legacyBehavior>
+              <Text
+                style="subtitle1"
+                css={{
+                  borderBottom: '1px solid $gray4',
+                  cursor: 'pointer',
+                  pb: '$4',
+                  pt: '24px',
+                }}
+              >
+                Rewards
               </Text>
             </Link>
             <Flex
@@ -235,7 +261,7 @@ const HamburgerMenu = () => {
                     width: '100%',
                   }}
                 >
-                  Explore
+                  Collection
                 </Text>
               </Link>
               <Link href="/portfolio" legacyBehavior>
@@ -249,22 +275,10 @@ const HamburgerMenu = () => {
                     width: '100%',
                   }}
                 >
-                  Portfolio
+                  Sell
                 </Text>
               </Link>
-              <Anchor
-                href="https://docs.reservoir.tools/docs"
-                target="_blank"
-                css={{
-                  borderBottom: '1px solid $gray4',
-                  cursor: 'pointer',
-                  pb: '$4',
-                  pt: '24px',
-                  width: '100%',
-                }}
-              >
-                <Text style="subtitle1">Docs</Text>
-              </Anchor>
+              
             </Flex>
             <Box>
               <ConnectWalletButton />

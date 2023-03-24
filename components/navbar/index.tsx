@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Box, Flex } from '../primitives'
+import { Box, Flex,HeaderRow,TableCell, Text } from '../primitives'
 import GlobalSearch from './GlobalSearch'
 import { useRouter } from 'next/router'
 import { useHotkeys } from 'react-hotkeys-hook'
@@ -18,6 +18,7 @@ import { ProfileDropdown } from './ProfileDropdown'
 import CartButton from './CartButton'
 
 export const NAVBAR_HEIGHT = 81
+export const NavBAR_HEIGHT_TOP = 30
 export const NAVBAR_HEIGHT_MOBILE = 77
 
 const Navbar = () => {
@@ -25,7 +26,8 @@ const Navbar = () => {
   const { isConnected } = useAccount()
   const isMobile = useMediaQuery({ query: '(max-width: 960px)' })
   const isMounted = useMounted()
-
+  const headings = ['Collection', '', 'Volume', 'Floor Price', 'Top Offer']
+  const desktopTemplateColumns = '1.5fr 1.7fr repeat(3, 0.6fr)'
   let searchRef = useRef<HTMLInputElement>(null)
 
   const router = useRouter()
@@ -87,7 +89,81 @@ const Navbar = () => {
       </Flex>
     </Flex>
   ) : (
+    
     <Flex>
+    <Flex
+      css={{
+        height: NavBAR_HEIGHT_TOP,
+        px: '$5',
+        width: '100%',
+        maxWidth: 1920,
+        mx: 'auto',
+        borderBottom: '1px solid $gray4',
+        zIndex: 999,
+        background: '$neutralBg',
+        position: 'fixed',
+        top: 0,
+        // left: 0,
+        // right: 0,
+        // bottom:0
+      }}
+      
+      align="center"
+      justify="between"
+    >
+      <Link href="">
+        <NavItem active={false}>{}</NavItem>
+      </Link>
+
+      <Link href="">
+        <NavItem active={false}>{}</NavItem>
+      </Link>
+      <Link href="">
+        <NavItem active={false}>{}</NavItem>
+      </Link>
+
+      <Link href="">
+        <NavItem active={false}>{}</NavItem>
+      </Link>
+      <Link href="">
+        <NavItem active={false}>{}</NavItem>
+      </Link>
+
+      <Link href="">
+        <NavItem active={false}>{}</NavItem>
+      </Link>
+      <Link href="">
+        <NavItem active={false}>{}</NavItem>
+      </Link>
+
+      <Link href="">
+        <NavItem active={false}>{}</NavItem>
+      </Link>
+      <Link href="">
+        <NavItem active={router.pathname == ''}>
+        Subscription
+        </NavItem>
+      </Link>
+      
+      <Link href="">
+        <NavItem active={router.pathname == ''}>CryptoiT!</NavItem>
+      </Link>
+      <Link href="">
+        <NavItem active={false}>AI Studio</NavItem>
+      </Link>
+
+      <Link href="">
+        <NavItem active={false}>Add to inventory</NavItem>
+      </Link>
+
+      <Link href="">
+        <NavItem active={false}>Limited Edition</NavItem>
+      </Link>
+
+      
+
+    
+    </Flex>
     <Flex
       css={{
         height: NAVBAR_HEIGHT,
@@ -99,7 +175,8 @@ const Navbar = () => {
         zIndex: 999,
         background: '$neutralBg',
         position: 'fixed',
-        top: 0,
+        top: NavBAR_HEIGHT_TOP,
+        // top: 0,
         left: 0,
         right: 0,
       }}
@@ -181,10 +258,10 @@ const Navbar = () => {
         borderBottom: '1px solid $gray4',
         zIndex: 999,
         background: '$neutralBg',
-        // position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
+        position: 'fixed',
+        top: NAVBAR_HEIGHT+NavBAR_HEIGHT_TOP,
+        // left: 0,
+        // right: 0,
       }}
       
       align="center"
@@ -237,6 +314,8 @@ const Navbar = () => {
       </Link>
     
     </Flex>
+
+    
 
     </Flex>
   )
