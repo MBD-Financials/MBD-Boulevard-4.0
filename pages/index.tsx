@@ -19,6 +19,8 @@ import CollectionsTimeDropdown, {
 import { Head } from 'components/Head'
 import { CollectionRankingsTable } from 'components/rankings/CollectionRankingsTable'
 import Collection from 'components/Collection/Collection'
+import AudioLive from 'components/AudioLive/AudioLive'
+import Slider from 'components/Slider/Slider'
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const IndexPage: NextPage<Props> = ({ ssr }) => {
@@ -147,9 +149,20 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
             </Link>
           </Box>
         </Flex>
-
+        
+        <Flex css={{ my: '$6', gap: 65 }} direction="column">
         <Collection/>
-
+        
+        <Box css={{ alignSelf: 'center' }}>
+          <Text style="h2">
+          Audio Collection
+          </Text>
+        </Box>
+        <AudioLive/>
+        <Slider/>
+        
+        </Flex>
+        
         <Footer />
       </Box>
     </Layout>

@@ -21,12 +21,7 @@
     gap: .5rem;
 }
 
-.daysComponent_box_img_1{
-    border-bottom-left-radius: 1rem;
-}
-.daysComponent_box_img_3{
-    border-bottom-right-radius: 1rem;
-}
+
 
 .daysComponent_box_title{
     padding: 1rem 2rem;
