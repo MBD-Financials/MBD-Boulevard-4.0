@@ -18,7 +18,7 @@ import CollectionsTimeDropdown, {
 } from 'components/common/CollectionsTimeDropdown'
 import { Head } from 'components/Head'
 import { CollectionRankingsTable } from 'components/rankings/CollectionRankingsTable'
-
+import Collection from 'components/Collection/Collection'
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const IndexPage: NextPage<Props> = ({ ssr }) => {
@@ -82,7 +82,7 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
             align="center"
             css={{ mx: 'auto', maxWidth: 728, pt: '$5', textAlign: 'center' }}
           >
-            <Text style="h3" css={{ mb: 24 }}>
+            <Text style="h3" css={{ mb: 24 ,mt:24}}>
               MBD Boulevard
             </Text>
             <Text style="body1" css={{ mb: 10 }}>
@@ -147,6 +147,9 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
             </Link>
           </Box>
         </Flex>
+
+        <Collection/>
+
         <Footer />
       </Box>
     </Layout>

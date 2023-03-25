@@ -40,6 +40,7 @@
     "react-dom": "^18.0",
     "react-dropzone": "^14.2.3",
     "react-hotkeys-hook": "^4.0.4",
+    "react-icons": "^4.8.0",
     "react-jazzicon": "^1.0.4",
     "react-markdown": "^8.0.4",
     "react-responsive": "^9.0.0",

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Box, Flex,HeaderRow,TableCell, Text } from '../primitives'
+import { Box, Flex} from '../primitives'
 import GlobalSearch from './GlobalSearch'
 import { useRouter } from 'next/router'
 import { useHotkeys } from 'react-hotkeys-hook'
@@ -26,8 +26,6 @@ const Navbar = () => {
   const { isConnected } = useAccount()
   const isMobile = useMediaQuery({ query: '(max-width: 960px)' })
   const isMounted = useMounted()
-  const headings = ['Collection', '', 'Volume', 'Floor Price', 'Top Offer']
-  const desktopTemplateColumns = '1.5fr 1.7fr repeat(3, 0.6fr)'
   let searchRef = useRef<HTMLInputElement>(null)
 
   const router = useRouter()

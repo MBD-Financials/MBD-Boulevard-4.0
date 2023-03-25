@@ -185,7 +185,7 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
           direction="column"
           css={{
             px: '$4',
-            pt: '$5',
+            pt:100,
             pb: 0,
             '@sm': {
               px: '$5',
