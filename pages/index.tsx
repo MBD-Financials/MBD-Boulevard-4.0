@@ -21,6 +21,8 @@ import { CollectionRankingsTable } from 'components/rankings/CollectionRankingsT
 import Collection from 'components/Collection/Collection'
 import AudioLive from 'components/AudioLive/AudioLive'
 import Slider from 'components/Slider/Slider'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter, faTelegram, faFacebook, faYoutube, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const IndexPage: NextPage<Props> = ({ ssr }) => {
@@ -99,6 +101,72 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
             >
               <Button color="gray3">More About MBD</Button>
             </a>
+              <Flex
+              direction="row"
+              align="center"
+              css={{ mx: 'auto', maxWidth: 728, pt: '$5', textAlign: 'center',gap: '$4' }}
+              >
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/MBDFinancials"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faTwitter} width={14} height={14} />
+                  </Button>
+                </a>
+                
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://t.me/MBDFinancials"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faTelegram} width={14} height={14} />
+                  </Button>
+                </a>
+
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/MBDFinancials"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faFacebook} width={14} height={14} />
+                  </Button>
+                </a>
+
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/mbdfinancials/"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faInstagram} width={14} height={14} />
+                  </Button>
+                </a>
+
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/company/mbdfinancials/"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faLinkedin} width={14} height={14} />
+                  </Button>
+                </a> 
+
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/channel/UCju8ObUSidjgEvevlXc9pVg"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faYoutube} width={14} height={14} />
+                  </Button>
+                </a>  
+            </Flex>
+
           </Flex>
         {/* )} */}
         <Flex css={{ my: '$6', gap: 65 }} direction="column">

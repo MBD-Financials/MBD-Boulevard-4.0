@@ -1,7 +1,8 @@
 import { FC } from 'react'
 import { Text, Box, Flex, Anchor, Button } from '../primitives'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faTelegram, faFacebook, faYoutube, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 
 type SectionTitleProps = {
   title: string
@@ -94,15 +95,65 @@ export const Footer = () => {
       >
         <SectionTitle title="Follow MBD" />
         <Flex css={{ gap: '$4', mt: 16 }}>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://twitter.com/MBDFinancials"
-          >
-            <Button size="xs" color="gray3">
-              <FontAwesomeIcon icon={faTwitter} width={14} height={14} />
-            </Button>
-          </a>
+        <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/MBDFinancials"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faTwitter} width={14} height={14} />
+                  </Button>
+                </a>
+                
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://t.me/MBDFinancials"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faTelegram} width={14} height={14} />
+                  </Button>
+                </a>
+
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/MBDFinancials"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faFacebook} width={14} height={14} />
+                  </Button>
+                </a>
+
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/mbdfinancials/"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faInstagram} width={14} height={14} />
+                  </Button>
+                </a>
+
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/company/mbdfinancials/"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faLinkedin} width={14} height={14} />
+                  </Button>
+                </a> 
+
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/channel/UCju8ObUSidjgEvevlXc9pVg"
+                >
+                  <Button size="xs" color="gray3">
+                    <FontAwesomeIcon icon={faYoutube} width={14} height={14} />
+                  </Button>
+                </a>
         </Flex>
       </Flex>
     </Flex>
