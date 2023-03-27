@@ -13,11 +13,11 @@ const SliderCard = ({ el, i }) => {
       <div className={Style.sliderCard_box}>
         <motion.div>
           <Image
-            className="aspect-auto mb-3 rounded-2xl object-cover h-80 w-100"
+            className={Style.sliderCard_box_image}
             src={el.background}
             alt="slider profile"
-            // width={500}
-            // height={300}
+            width={500}
+            height={300}
             // style={{objectFit:"cover"}}
           />
         </motion.div>
@@ -38,9 +38,7 @@ const SliderCard = ({ el, i }) => {
           <div className={Style.sliderCard_box_price_time}>
             <p className="text-xs sm:text-xs">Remaining time</p>
             <p className="text-xs sm:text-xs">{i + 1}h : 15m : {i + 4}0s</p>
-            {/* <pp>
-              {i + 1}h : 15m : {i + 4}0s
-            </pp> */}
+            
           </div>
         </div>
       </div>
