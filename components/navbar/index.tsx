@@ -291,37 +291,40 @@ const Navbar = () => {
       </Link>
       
       <Link href="">
-        <NavItem active={router.pathname == '/portfolio'}>PFP</NavItem>
+        <NavItem active={router.pathname == '/portfolio'}>Electronics</NavItem>
       </Link>
       
       <Link href="">
-        <NavItem active={false}>Arts</NavItem>
+        <NavItem active={false}>Computers</NavItem>
       </Link>
 
       <Link href="">
-        <NavItem active={false}>Audio</NavItem>
+        <NavItem active={false}>Video Games</NavItem>
       </Link>
 
       <Link href="">
-        <NavItem active={false}>Video</NavItem>
+        <NavItem active={false}>Home & Garden</NavItem>
       </Link>
 
       <Link href="">
-        <NavItem active={false}>Collectibles</NavItem>
+        <NavItem active={false}>Health & Beauty</NavItem>
       </Link>
 
       <Link href="">
-        <NavItem active={false}>1/1</NavItem>
+        <NavItem active={false}>Collectibles & Art</NavItem>
       </Link>
 
       <Link href="">
-        <NavItem active={false}>Limited Edition</NavItem>
+        <NavItem active={false}>Books</NavItem>
       </Link>
 
       <Link href="">
-        <NavItem active={false}>Coupons</NavItem>
+        <NavItem active={false}>Music</NavItem>
       </Link>
 
+      <Link href="">
+        <NavItem active={false}>Deals</NavItem>
+      </Link>
       <Link href="">
         <NavItem active={false}>Other</NavItem>
       </Link>
