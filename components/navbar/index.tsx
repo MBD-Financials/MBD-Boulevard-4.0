@@ -160,9 +160,7 @@ const Navbar = () => {
         <NavItem active={router.pathname == ''}>CryptoiT!</NavItem>
       </Link>
 
-      <Link href="">
-        <NavItem active={router.pathname == ''}>Charity!</NavItem>
-      </Link>
+     
 
       <Link href="https://aistudio.netlify.app/">
         <NavItem active={false}>AI Studio</NavItem>
@@ -172,9 +170,7 @@ const Navbar = () => {
         <NavItem active={false}>Add to inventory</NavItem>
       </Link>
 
-      <Link href="">
-        <NavItem active={false}>Limited Edition</NavItem>
-      </Link>
+      
 
       
 
@@ -313,6 +309,9 @@ const Navbar = () => {
       <Link href="">
         <NavItem active={false}>Collectibles & Art</NavItem>
       </Link>
+      <Link href="">
+        <NavItem active={router.pathname == ''}>Charity!</NavItem>
+      </Link>
 
       <Link href="">
         <NavItem active={false}>Books</NavItem>
@@ -324,6 +323,9 @@ const Navbar = () => {
 
       <Link href="">
         <NavItem active={false}>Deals</NavItem>
+      </Link>
+      <Link href="">
+        <NavItem active={false}>Limited Edition</NavItem>
       </Link>
       <Link href="">
         <NavItem active={false}>Other</NavItem>
