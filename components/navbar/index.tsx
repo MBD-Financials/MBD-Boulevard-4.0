@@ -159,6 +159,11 @@ const Navbar = () => {
       <Link href="https://mbdsend.netlify.app/">
         <NavItem active={router.pathname == ''}>CryptoiT!</NavItem>
       </Link>
+
+      <Link href="">
+        <NavItem active={router.pathname == ''}>Charity!</NavItem>
+      </Link>
+
       <Link href="https://aistudio.netlify.app/">
         <NavItem active={false}>AI Studio</NavItem>
       </Link>
