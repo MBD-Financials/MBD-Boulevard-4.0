@@ -209,12 +209,13 @@ const IndexPage: NextPage<Props> = ({ id, collectionId, ssr }) => {
         ogImage={token?.token?.image || collection?.banner}
         title={pageTitle}
         description={collection?.description as string}
+        
       />
       <Flex
         justify="center"
         css={{
           maxWidth: 1175,
-          mt: 10,
+          mt: 20,
           pb: 100,
           marginLeft: 'auto',
           marginRight: 'auto',
@@ -239,6 +240,7 @@ const IndexPage: NextPage<Props> = ({ id, collectionId, ssr }) => {
           css={{
             maxWidth: '100%',
             flex: 1,
+            mt: 20,
             width: '100%',
             '@md': { maxWidth: 445 },
             position: 'relative',
@@ -261,6 +263,7 @@ const IndexPage: NextPage<Props> = ({ id, collectionId, ssr }) => {
               borderRadius: 8,
               '@sm': {
                 button: {
+                  
                   height: 0,
                   opacity: 0,
                   transition: 'opacity .3s',
@@ -300,7 +303,7 @@ const IndexPage: NextPage<Props> = ({ id, collectionId, ssr }) => {
                 width: '100%',
                 gridTemplateColumns: '1fr 1fr',
                 gap: '$3',
-                mt: 24,
+                mt: 30,
               }}
             >
               {token?.token?.attributes?.map((attribute) => (
@@ -319,6 +322,7 @@ const IndexPage: NextPage<Props> = ({ id, collectionId, ssr }) => {
           css={{
             flex: 1,
             px: '$4',
+            mt: 20,
             width: '100%',
             '@md': {
               px: 0,
