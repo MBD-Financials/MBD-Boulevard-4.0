@@ -137,16 +137,29 @@ const Navbar = () => {
       <Link href="">
         <NavItem active={false}>{}</NavItem>
       </Link>
+      
+      <Link href="">
+        <NavItem active={router.pathname == ''}>
+        MBD Gemz - Coming Soon
+        </NavItem>
+      </Link>
+      
       <Link href="">
         <NavItem active={router.pathname == ''}>
         Subscription
+        </NavItem>
+      </Link>
+
+      <Link href="https://mbdme.netlify.app/">
+        <NavItem active={router.pathname == ''}>
+        Launchpad
         </NavItem>
       </Link>
       
       <Link href="">
         <NavItem active={router.pathname == ''}>CryptoiT!</NavItem>
       </Link>
-      <Link href="">
+      <Link href="https://aistudio.netlify.app/">
         <NavItem active={false}>AI Studio</NavItem>
       </Link>
 
@@ -224,7 +237,7 @@ const Navbar = () => {
             <Link href="/mint">
               <NavItem active={false}>Mint</NavItem>
             </Link>
-            <Link href="/mint">
+            <Link href="/rewards">
               <NavItem active={false}>Rewards</NavItem>
             </Link>
           </Flex>
@@ -272,42 +285,42 @@ const Navbar = () => {
         </NavItem>
       </Link>
       
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={router.pathname == '/portfolio'}>PFP</NavItem>
       </Link>
       
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={false}>Arts</NavItem>
       </Link>
 
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={false}>Audio</NavItem>
       </Link>
 
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={false}>Video</NavItem>
       </Link>
 
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={false}>Collectibles</NavItem>
       </Link>
 
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={false}>1/1</NavItem>
       </Link>
 
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={false}>Limited Edition</NavItem>
       </Link>
 
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={false}>Coupons</NavItem>
       </Link>
 
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={false}>Other</NavItem>
       </Link>
-      <Link href="/portfolio">
+      <Link href="">
         <NavItem active={false}>More</NavItem>
       </Link>
     

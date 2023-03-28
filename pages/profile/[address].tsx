@@ -141,6 +141,7 @@ const IndexPage: NextPage<Props> = ({ address, ssr, ensName }) => {
       <Flex
         direction="column"
         css={{
+          mt:50,
           px: '$4',
           pt: '$5',
           pb: 0,

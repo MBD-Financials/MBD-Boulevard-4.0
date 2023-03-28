@@ -55,7 +55,7 @@ const IndexPage: NextPage = () => {
         <Flex
           direction="column"
           css={{
-            mt: 30,
+            mt: 50,
             px: '$4',
             py: 40,
             '@sm': {

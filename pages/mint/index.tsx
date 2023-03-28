@@ -128,6 +128,7 @@ const [filterCollection, setFilterCollection] = useState<string | undefined>(
           
           css={{
             px: '$4',
+            
             py: 40,
             '@sm': {
               px: '$5',
@@ -137,7 +138,7 @@ const [filterCollection, setFilterCollection] = useState<string | undefined>(
           {isConnected ? (
             <>
             
-            <Flex direction="column" css={{ gap: '$4' }}>
+            <Flex direction="column" css={{ gap: '$4',mt:50 }}>
               
               <Flex direction="column" align="center" justify="between" css={{ gap: '$4' }}>
                 <Text style="h2" css={{}}>
