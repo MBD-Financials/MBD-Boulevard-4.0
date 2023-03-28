@@ -149,14 +149,14 @@ const Navbar = () => {
         Subscription
         </NavItem>
       </Link>
-
-      <Link href="https://mbdme.netlify.app/">
+      {/* https://mbdme.netlify.app/ */}
+      <Link href="">
         <NavItem active={router.pathname == ''}>
         Launchpad
         </NavItem>
       </Link>
       
-      <Link href="">
+      <Link href="https://mbdsend.netlify.app/">
         <NavItem active={router.pathname == ''}>CryptoiT!</NavItem>
       </Link>
       <Link href="https://aistudio.netlify.app/">
@@ -267,7 +267,7 @@ const Navbar = () => {
         maxWidth: 1920,
         mx: 'auto',
         borderBottom: '1px solid $gray4',
-        zIndex: 999,
+        // zIndex: 999,
         background: '$neutralBg',
         position: 'fixed',
         top: NAVBAR_HEIGHT+NavBAR_HEIGHT_TOP,

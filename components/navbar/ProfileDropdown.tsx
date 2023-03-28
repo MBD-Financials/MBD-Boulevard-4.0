@@ -31,6 +31,7 @@ export const ProfileDropdown: FC = () => {
     <Button
       css={{
         justifyContent: 'center',
+        // zIndex:9,
       }}
       corners="circle"
       type="button"
