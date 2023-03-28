@@ -291,16 +291,14 @@ const Navbar = () => {
       </Link>
       
       <Link href="">
-        <NavItem active={false}>Computers</NavItem>
+        <NavItem active={false}>Videos</NavItem>
       </Link>
 
       <Link href="">
-        <NavItem active={false}>Video Games</NavItem>
+        <NavItem active={false}>Games</NavItem>
       </Link>
 
-      <Link href="">
-        <NavItem active={false}>Home & Garden</NavItem>
-      </Link>
+      
 
       <Link href="">
         <NavItem active={false}>Health & Beauty</NavItem>
@@ -321,9 +319,7 @@ const Navbar = () => {
         <NavItem active={false}>Music</NavItem>
       </Link>
 
-      <Link href="">
-        <NavItem active={false}>Deals</NavItem>
-      </Link>
+
       <Link href="">
         <NavItem active={false}>Limited Edition</NavItem>
       </Link>
