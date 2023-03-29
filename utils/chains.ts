@@ -39,13 +39,13 @@ export default [
     apiKey: process.env.POLYGON_RESERVOIR_API_KEY,
     coingeckoId: 'matic-network',
   },
-  {
-    ...goerli,
-    iconUrl: `/icons/goerli-icon.svg`,
-    reservoirBaseUrl: 'https://api-goerli.reservoir.tools',
-    proxyApi: '/api/reservoir/goerli',
-    routePrefix: 'goerli',
-    apiKey: process.env.GOERLI_RESERVOIR_API_KEY,
-    coingeckoId: 'goerli-eth',
-  },
+  // {
+  //   ...goerli,
+  //   iconUrl: `/icons/goerli-icon.svg`,
+  //   reservoirBaseUrl: 'https://api-goerli.reservoir.tools',
+  //   proxyApi: '/api/reservoir/goerli',
+  //   routePrefix: 'goerli',
+  //   apiKey: process.env.GOERLI_RESERVOIR_API_KEY,
+  //   coingeckoId: 'goerli-eth',
+  // },
 ]
