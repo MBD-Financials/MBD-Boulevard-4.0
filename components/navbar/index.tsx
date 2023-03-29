@@ -268,7 +268,7 @@ const Navbar = () => {
         maxWidth: 1920,
         mx: 'auto',
         borderBottom: '1px solid $gray4',
-        zIndex: 999,
+        zIndex: 4,
         background: '$neutralBg',
         position: 'fixed',
         top: NAVBAR_HEIGHT+NavBAR_HEIGHT_TOP,
