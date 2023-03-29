@@ -187,6 +187,7 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
             px: '$4',
             pt:100,
             pb: 0,
+            // zIndex: 999,
             '@sm': {
               px: '$5',
             },
