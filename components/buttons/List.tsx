@@ -94,10 +94,14 @@ const List: FC<Props> = ({
             })
             return
           }
-          addToast?.({
-            title: 'Could not list token',
-            description: 'The transaction was not completed.',
-          })
+          else{
+            console.log(err);
+            addToast?.({
+              title: 'Could not list token',
+              description: 'The transaction was not completed.',
+            })
+          }
+          
         }}
       />
     )
