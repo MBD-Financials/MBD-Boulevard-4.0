@@ -13,6 +13,7 @@ import wrappedContracts from 'utils/wrappedContracts'
 
 // https://nextjs.org/docs/api-routes/dynamic-api-routes#catch-all-api-routes
 const proxy = async (req: NextApiRequest, res: NextApiResponse) => {
+  console.log(req)
   const { query, body, method, headers: reqHeaders } = req
   const { slug } = query
   // Isolate the query object
@@ -33,7 +34,6 @@ const proxy = async (req: NextApiRequest, res: NextApiResponse) => {
     DefaultChain
 
   const url = new URL(endpoint.replace(chainPrefix, ''), chain.reservoirBaseUrl)
-  console.log(url);
   setParams(url, query)
 
   if (endpoint.includes('redirect/')) {
