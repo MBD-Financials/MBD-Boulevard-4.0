@@ -13,7 +13,6 @@ import wrappedContracts from 'utils/wrappedContracts'
 
 // https://nextjs.org/docs/api-routes/dynamic-api-routes#catch-all-api-routes
 const proxy = async (req: NextApiRequest, res: NextApiResponse) => {
-  console.log(req)
   const { query, body, method, headers: reqHeaders } = req
   const { slug } = query
   // Isolate the query object
