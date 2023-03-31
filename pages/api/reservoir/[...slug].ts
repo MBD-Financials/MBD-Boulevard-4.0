@@ -33,6 +33,7 @@ const proxy = async (req: NextApiRequest, res: NextApiResponse) => {
     DefaultChain
 
   const url = new URL(endpoint.replace(chainPrefix, ''), chain.reservoirBaseUrl)
+  console.log(url);
   setParams(url, query)
 
   if (endpoint.includes('redirect/')) {
