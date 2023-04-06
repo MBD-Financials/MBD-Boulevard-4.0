@@ -125,7 +125,6 @@ const CollectionTableRow: FC<CollectionTableRowProps> = ({
 
   if (isSmallDevice && collection?.collection?.name!=="MBD Boulevard NFT") {
     return (
-     
       <TableRow
         key={collection?.collection?.id}
         css={{ gridTemplateColumns: mobileTemplateColumns }}
@@ -270,6 +269,9 @@ const CollectionTableRow: FC<CollectionTableRowProps> = ({
           </TableCell>
         </TableRow>
       )
+    }
+    else{
+      return (<></>)
     }
   }
   
