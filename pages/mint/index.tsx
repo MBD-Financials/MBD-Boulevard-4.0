@@ -54,7 +54,10 @@ const fetchContract = async () => {
     "nft-collection"
   );
 
-  const userContractMarketPlace =  await thirdwebSDK.getContract("0x93550e85536b790FAA04a0d1dEa7a1E24EBBBb4a", "marketplace");
+  const userContractMarketPlace =  await thirdwebSDK.getContract(
+    "0x93550e85536b790FAA04a0d1dEa7a1E24EBBBb4a",
+    "marketplace"
+  );
   return [mintSigner, userContract, userContractMarketPlace];
 }
 
@@ -66,9 +69,9 @@ const mintNFT = async (name:string, image:string, description:string, price: str
 
   try {
     const contracts = await fetchContract();
-    const mintSigner = contracts[0];
-    const contract = contracts[1];
-    const marketplace = contracts[2];
+    const mintSigner: any = contracts[0];
+    const contract: any = contracts[1];
+    const marketplace: any = contracts[2];
     const data = {
       to: address!,
       metadata: {
