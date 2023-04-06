@@ -18,6 +18,7 @@ const DropZone = ({
   description,
   category,
   properties,
+  price,
   setImage
 }) => {
   const [fileUrl, setFileUrl] = useState(null);
@@ -119,6 +120,13 @@ const DropZone = ({
                 >
                   Properties:
                   {properties || ""}
+                </Text>
+                <Text
+                  style="h4"
+                  css={{ color: '$white', textAlign: 'center' }}
+                >
+                  Price:
+                  {price || ""}
                 </Text>
                 </Flex>
                 <Flex direction="row" justify="between" css={{ gap: '$4' }}>

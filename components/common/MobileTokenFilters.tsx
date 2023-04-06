@@ -76,6 +76,11 @@ export const MobileTokenFilters: FC<Props> = ({
   if (collections?.length === 0 || collections == null) {
     return null
   }
+  
+  
+  const collectionWithoutMBD = collections.filter((obj) => {
+    return obj?.collection?.name !== "MBD Boulevard NFT";
+  });
 
   return (
     <FullscreenModal trigger={trigger}>
@@ -134,7 +139,8 @@ export const MobileTokenFilters: FC<Props> = ({
           <Text style="subtitle1" css={{ mb: '$2', pl: '$4' }}>
             Collections
           </Text>
-          {collections?.map((collection) => {
+          {collectionWithoutMBD?.map((collection) => {
+            
             let selected = collection?.collection?.id == filterCollection
             return (
               <Flex

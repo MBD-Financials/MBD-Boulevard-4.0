@@ -123,8 +123,9 @@ const CollectionTableRow: FC<CollectionTableRowProps> = ({
   const isSmallDevice = useMediaQuery({ maxWidth: 900 })
   const { routePrefix } = useMarketplaceChain()
 
-  if (isSmallDevice) {
+  if (isSmallDevice && collection?.collection?.name!=="MBD Boulevard NFT") {
     return (
+     
       <TableRow
         key={collection?.collection?.id}
         css={{ gridTemplateColumns: mobileTemplateColumns }}
@@ -199,75 +200,79 @@ const CollectionTableRow: FC<CollectionTableRowProps> = ({
       </TableRow>
     )
   }
-
-  return (
-    <TableRow
-      key={collection?.collection?.id}
-      css={{ gridTemplateColumns: desktopTemplateColumns }}
-    >
-      <TableCell css={{ minWidth: 0 }}>
-        <Link href={`/collection/${routePrefix}/${collection?.collection?.id}`}>
-          <Flex align="center">
-            {collection?.collection?.image && (
-              <Image
-                style={{
-                  borderRadius: '4px',
-                  objectFit: 'cover',
-                  aspectRatio: '1/1',
-                }}
-                loader={({ src }) => src}
-                src={collection?.collection?.image}
-                alt={`${collection?.collection?.name}`}
-                width={48}
-                height={48}
-              />
-            )}
-            <Text style="subtitle2" ellipsify css={{ ml: '$2' }}>
-              {collection?.collection?.name}
-            </Text>
-          </Flex>
-        </Link>
-      </TableCell>
-      <TableCell>
-        <Flex
-          direction="column"
-          align="start"
-          justify="start"
-          css={{ height: '100%' }}
+  else{
+    if(collection?.collection?.name!=="MBD Boulevard NFT"){
+      return (
+        <TableRow
+          key={collection?.collection?.id}
+          css={{ gridTemplateColumns: desktopTemplateColumns }}
         >
-          <FormatCryptoCurrency
-            amount={collection?.collection?.volume?.[sortByTime]}
-            textStyle="subtitle2"
-            logoHeight={14}
-          />
-          {sortByTime != 'allTime' && collection?.collection?.volumeChange && (
-            <PercentChange
-              value={collection?.collection?.volumeChange[sortByTime]}
+          <TableCell css={{ minWidth: 0 }}>
+            <Link href={`/collection/${routePrefix}/${collection?.collection?.id}`}>
+              <Flex align="center">
+                {collection?.collection?.image && (
+                  <Image
+                    style={{
+                      borderRadius: '4px',
+                      objectFit: 'cover',
+                      aspectRatio: '1/1',
+                    }}
+                    loader={({ src }) => src}
+                    src={collection?.collection?.image}
+                    alt={`${collection?.collection?.name}`}
+                    width={48}
+                    height={48}
+                  />
+                )}
+                <Text style="subtitle2" ellipsify css={{ ml: '$2' }}>
+                  {collection?.collection?.name}
+                </Text>
+              </Flex>
+            </Link>
+          </TableCell>
+          <TableCell>
+            <Flex
+              direction="column"
+              align="start"
+              justify="start"
+              css={{ height: '100%' }}
+            >
+              <FormatCryptoCurrency
+                amount={collection?.collection?.volume?.[sortByTime]}
+                textStyle="subtitle2"
+                logoHeight={14}
+              />
+              {sortByTime != 'allTime' && collection?.collection?.volumeChange && (
+                <PercentChange
+                  value={collection?.collection?.volumeChange[sortByTime]}
+                />
+              )}
+            </Flex>
+          </TableCell>
+          <TableCell>
+            <Text style="subtitle2">
+              <FormatCryptoCurrency
+                amount={collection?.collection?.topBidValue}
+                textStyle="subtitle2"
+                logoHeight={14}
+              />
+            </Text>
+          </TableCell>
+          <TableCell>
+            <FormatCryptoCurrency
+              amount={collection?.collection?.floorAskPrice}
+              textStyle="subtitle2"
+              logoHeight={14}
             />
-          )}
-        </Flex>
-      </TableCell>
-      <TableCell>
-        <Text style="subtitle2">
-          <FormatCryptoCurrency
-            amount={collection?.collection?.topBidValue}
-            textStyle="subtitle2"
-            logoHeight={14}
-          />
-        </Text>
-      </TableCell>
-      <TableCell>
-        <FormatCryptoCurrency
-          amount={collection?.collection?.floorAskPrice}
-          textStyle="subtitle2"
-          logoHeight={14}
-        />
-      </TableCell>
-      <TableCell>
-        <Text style="subtitle2">{collection?.ownership?.tokenCount}</Text>
-      </TableCell>
-    </TableRow>
-  )
+          </TableCell>
+          <TableCell>
+            <Text style="subtitle2">{collection?.ownership?.tokenCount}</Text>
+          </TableCell>
+        </TableRow>
+      )
+    }
+  }
+  
 }
 
 const TableHeading = () => (

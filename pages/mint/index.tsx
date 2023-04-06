@@ -18,6 +18,8 @@ import DropZone from 'components/DropZone/DropZone'
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { useSigner, useAccount } from 'wagmi'
 import { useRouter } from "next/router";
+import { constants } from 'buffer'
+import { NATIVE_TOKEN_ADDRESS } from "@thirdweb-dev/sdk";
 
 const IndexPage: NextPage = () => {
   const { address, isConnected } = useAccount()
@@ -26,6 +28,7 @@ const IndexPage: NextPage = () => {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState(0);
   const [properties, setProperties] = useState("");
+  const [price, setPrice] = useState("");
   const [image, setImage] = useState(null);
   const { data: signer, isError, isLoading } = useSigner()
   const router = useRouter();
@@ -50,19 +53,22 @@ const fetchContract = async () => {
     "0x42EB6537AFD6a6DD5d5feB9705eb33A59Db143B4",
     "nft-collection"
   );
-  return [mintSigner, userContract];
+
+  const userContractMarketPlace =  await thirdwebSDK.getContract("0x93550e85536b790FAA04a0d1dEa7a1E24EBBBb4a", "marketplace");
+  return [mintSigner, userContract, userContractMarketPlace];
 }
 
 
-const mintNFT = async (name:string, image:string, description:string) => {
+const mintNFT = async (name:string, image:string, description:string, price: string) => {
   
-  if (!name || !description || !image)
+  if (!name || !description || !image || !price)
   return;
 
   try {
     const contracts = await fetchContract();
     const mintSigner = contracts[0];
     const contract = contracts[1];
+    const marketplace = contracts[2];
     const data = {
       to: address!,
       metadata: {
@@ -76,8 +82,18 @@ const mintNFT = async (name:string, image:string, description:string) => {
     const isValid = await contract.erc721.signature.verify(signedPayload);
     console.log(isValid);
 
-    const tx = await contract.erc721.signature.mint(signedPayload);
-    alert("Minted Succesfully!!");
+    const nft = await contract.erc721.signature.mint(signedPayload);
+    const tokenID = nft.id.toNumber();
+    const tx = await marketplace.direct.createListing({
+      assetContractAddress: "0x42EB6537AFD6a6DD5d5feB9705eb33A59Db143B4", // address of the contract the asset you want to list is on
+      tokenId: tokenID, // token ID of the asset you want to list
+      startTimestamp: new Date(), // when should the listing open up for offers
+      listingDurationInSeconds: 2592000, // how long the listing will be open for
+      quantity: 1, // how many of the asset you want to list
+      currencyContractAddress: NATIVE_TOKEN_ADDRESS, // address of the currency contract that will be used to pay for the listing
+      buyoutPricePerToken: price, // how much the asset will be sold for
+      });	
+    alert("Minted and Listed Succesfully!!");
     // const nft = await tx.data(); // (optional) fetch details of minted NFT
 
     router.push("/portfolio");
@@ -170,6 +186,7 @@ const [filterCollection, setFilterCollection] = useState<string | undefined>(
                     description={description}
                     category={category}
                     properties={properties}
+                    price = {price}
                     setImage={setImage}
                   />
                 
@@ -230,6 +247,20 @@ const [filterCollection, setFilterCollection] = useState<string | undefined>(
                     onChange={(e) => setProperties(e.target.value)}
                 />
 
+                <Text
+                  style="h4"
+                  css={{ color: '$white', textAlign: 'center' }}
+                >
+                  Price
+                </Text>
+                
+                <Input
+                    type="text"
+                    placeholder="Enter Price in Matic"
+                    onChange={(e) => setPrice(e.target.value)}
+                />
+
+
                 <Button
                         css={{ flex: 0, justifyContent: 'center' , width: '20%', mx: 'auto'}}
                         corners="rounded"
@@ -238,11 +269,12 @@ const [filterCollection, setFilterCollection] = useState<string | undefined>(
                           mintNFT(
                             name,
                             image!,
-                            description
+                            description,
+                            price
                           )
                         }}
                   >
-                        Mint
+                        Mint + List
                 </Button>   
 
             </Flex>   

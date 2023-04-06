@@ -287,7 +287,7 @@ const Navbar = () => {
       </Link>
       
       <Link href="">
-        <NavItem active={router.pathname == '/portfolio'}>Electronics</NavItem>
+        <NavItem active={router.pathname == ''}>Electronics</NavItem>
       </Link>
       
       <Link href="">

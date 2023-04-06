@@ -345,9 +345,21 @@ const IndexPage: NextPage<Props> = ({ id, collectionId, ssr }) => {
                     gap: '$2',
                   }}
                 >
-                  <FontAwesomeIcon icon={faArrowLeft} height={16} />
+                  
                   <Text css={{ color: 'inherit' }} style="subtitle1" ellipsify>
-                    {token?.token?.collection?.name}
+                    {
+                      (token?.token?.collection?.name==="MBD Boulevard NFT")?<></>
+                      :
+                      ( <Flex css={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '$2',
+                        }}>
+                          <FontAwesomeIcon icon={faArrowLeft} height={16} />
+                          {token?.token?.collection?.name}
+
+                        </Flex>
+                        )}
                   </Text>
                 </Anchor>
               </Link>

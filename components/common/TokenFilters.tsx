@@ -33,6 +33,11 @@ export const TokenFilters: FC<Props> = ({
   if (collections?.length === 0 || collections == null || isLoading) {
     return null
   }
+  const collectionWithoutMBD = collections.filter((obj) => {
+    return obj?.collection?.name !== "MBD Boulevard NFT";
+  });
+
+  console.log(collectionWithoutMBD)
   return (
     <Collapsible.Root
       open={open}
@@ -53,7 +58,7 @@ export const TokenFilters: FC<Props> = ({
       >
         <Flex direction="column">
           <Text style="subtitle1" css={{ mb: '$2', ml: '$3' }}></Text>
-          {collections?.map((collection) => {
+          {collectionWithoutMBD?.map((collection) => {
             let selected = collection?.collection?.id == filterCollection
             return (
               <Flex
