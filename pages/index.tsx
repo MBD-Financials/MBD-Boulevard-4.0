@@ -99,7 +99,7 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
               href=""
               target="_blank"
             >
-              <Button color="gray3">AI Analytics</Button>
+              <Button color="gray3">AI Analytics(coming soon)</Button>
             </a>
               <Flex
               direction="row"
