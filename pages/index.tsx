@@ -96,10 +96,10 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
             Discover the most outstanding NTFs in all topics of life. Create your NTFs and sell them
             </Text>
             <a
-              href="https://mbdfinancials.com/"
+              href=""
               target="_blank"
             >
-              <Button color="gray3">More About MBD</Button>
+              <Button color="gray3">AI Analytics</Button>
             </a>
               <Flex
               direction="row"

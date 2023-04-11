@@ -101,6 +101,7 @@ const mintNFT = async (name:string, image:string, description:string, price: str
 
     router.push("/portfolio");
   } catch (error) {
+    console.log("ERROR")
     console.log(error);
     // alert(error)
   }
@@ -166,7 +167,7 @@ const [filterCollection, setFilterCollection] = useState<string | undefined>(
                 
 
                 <Text style="h2" css={{}}>
-                Image, Video, Audio, or 3D Model
+                Image, Video or Audio
                 </Text>
 
                 <Text style="body1" css={{}}>

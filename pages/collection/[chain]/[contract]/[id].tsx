@@ -14,6 +14,7 @@ import {
   useTokenActivity,
   useTokenOpenseaBanned,
   useUserTokens,
+  extractMediaType
 } from '@reservoir0x/reservoir-kit-ui'
 import { paths } from '@reservoir0x/reservoir-sdk'
 import { ActivityFilters } from 'components/token/ActivityFilters'
@@ -109,7 +110,9 @@ const IndexPage: NextPage<Props> = ({ id, collectionId, ssr }) => {
 
   const flagged = useTokenOpenseaBanned(collectionId, id)
   const token = tokens && tokens[0] ? tokens[0] : undefined
+  console.log(token);
   const is1155 = token?.token?.kind === 'erc1155'
+  
 
   const { data: userTokens } = useUserTokens(
     is1155 ? account.address : undefined,
@@ -202,8 +205,9 @@ const IndexPage: NextPage<Props> = ({ id, collectionId, ssr }) => {
   const pageTitle = token?.token?.name
     ? token.token.name
     : `${token?.token?.tokenId} - ${token?.token?.collection?.name}`
-
+  
   return (
+    
     <Layout>
       <Head
         ogImage={token?.token?.image || collection?.banner}

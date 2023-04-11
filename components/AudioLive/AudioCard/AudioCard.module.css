@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     line-height: 0;
-    z-index: 123;
+    /* z-index: 0; */
 }
 
 .audioCard_box_like{
@@ -71,7 +71,7 @@
     display:  flex;
     padding-inline: 3.5rem;
     gap: 2rem;
-    z-index: 1234;
+    /* z-index: -999; */
     align-items: center;
     margin:auto;
     height:100px;
@@ -102,7 +102,7 @@
     grid-column: 1 / -1;
     grid-row: 5 / -1;
 
-    z-index: 123;
+    /* z-index: 123; */
     display: flex;
     align-items: center;
     justify-content: space-between;

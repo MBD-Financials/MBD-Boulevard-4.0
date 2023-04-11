@@ -34,23 +34,23 @@ class MyDocument extends Document {
         {/* Favicon */}
         <link
           rel="shortcut icon"
-          type="image/svg"
+          type="image/png"
           href="/mbddark.png"
         />
 
         {/* Reservoir meta tags reservoir:*/}
-        <meta property="title" content="MBD Boulevard" />
-        <meta property="icon" content="/mbdlight.png" />
+        <meta property="reservoir:title" content="MBD Boulevard" />
+        <meta property="reservoir:icon" content="/mbdlight.png" />
         <meta
-          property="token-url-mainnet"
+          property="reservoir:token-url-mainnet"
           content="/collection/ethereum/${contract}/${tokenId}"
         />
         <meta
-          property="token-url-goerli"
+          property="reservoir:token-url-goerli"
           content="/collection/goerli/${contract}/${tokenId}"
         />
         <meta
-          property="token-url-polygon"
+          property="reservoir:token-url-polygon"
           content="/collection/polygon/${contract}/${tokenId}"
         />
         <body>
