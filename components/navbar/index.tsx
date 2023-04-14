@@ -166,7 +166,7 @@ const Navbar = () => {
         <NavItem active={false}>AI Studio</NavItem>
       </Link>
 
-      <Link href="">
+      <Link href="/mint">
         <NavItem active={false}>Add to inventory</NavItem>
       </Link>
 
