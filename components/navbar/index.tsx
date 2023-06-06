@@ -162,7 +162,7 @@ const Navbar = () => {
 
      
 
-      <Link href="https://aistudio.netlify.app/">
+      <Link href="https://chatmbd.com/">
         <NavItem active={false}>AI Studio</NavItem>
       </Link>
 
